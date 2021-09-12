@@ -1,10 +1,10 @@
 package ru.job4j.inheritance.professions;
 
 public class Engineer extends Profession {
-    public Engineer() {
-    }
+    private boolean license;
 
-//    public Engineer(String name, String surname, String education, String birthday) {
-//        super(name, surname, education, birthday);
-//    }
+    public Engineer(String name, String surname, String education, String birthday, boolean license) {
+        super(name, surname, education, birthday);
+        this.license = license;
+    }
 }

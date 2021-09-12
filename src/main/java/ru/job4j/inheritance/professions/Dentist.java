@@ -1,14 +1,10 @@
 package ru.job4j.inheritance.professions;
 
 public class Dentist extends Doctor {
-    boolean salary;
+    private boolean salary;
 
-    public Dentist(boolean salary) {
-        this.salary = salary;
-    }
-
-    public Dentist(String name, String surname, String education, String birthday, boolean salary) {
-        super(name, surname, education, birthday);
+    public Dentist(String name, String surname, String education, String birthday, int age, boolean salary) {
+        super(name, surname, education, birthday, age);
         this.salary = salary;
     }
 
