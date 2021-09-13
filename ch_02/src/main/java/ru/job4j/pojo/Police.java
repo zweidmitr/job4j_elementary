@@ -1,7 +1,5 @@
 package ru.job4j.pojo;
 
-import ru.job4j.encapsulation.License;
-
 import java.util.Date;
 
 public class Police {
