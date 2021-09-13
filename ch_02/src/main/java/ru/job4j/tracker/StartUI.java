@@ -11,5 +11,9 @@ public class StartUI {
         String currentTime = tekTime.format(formatter);
         System.out.println("На часах сейчас: " + currentTime);
 
+        System.out.println();
+        Item dateItem = new Item(2140, "Date Item");
+        System.out.println(dateItem);
+
     }
 }
