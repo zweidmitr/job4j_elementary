@@ -62,10 +62,8 @@ public class TrackerTest {
         Item bug = new Item("Bug");
         tracker.add(bug);
         int id = bug.getId();
-        System.out.println(tracker.findById(id).getName());
         Item bugWithDesc = new Item("Bug with description");
         tracker.replace(id, bugWithDesc);
-        System.out.println(tracker.findById(id).getName());
         assertThat(tracker.findById(id).getName(), is("Bug with description"));
     }
 
