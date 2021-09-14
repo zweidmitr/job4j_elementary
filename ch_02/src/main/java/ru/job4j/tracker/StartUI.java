@@ -6,9 +6,12 @@ public class StartUI {
     public void init(Scanner scanner, Tracker tracker) {
         boolean run = true;
         while (run) {
+            System.out.println("===================");
             showMenu();
+            System.out.println("===================");
             System.out.print("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
+            System.out.println("===================");
             if (select == 0) {
                 System.out.println("=== Create a new Item ===");
                 System.out.print("Enter name: ");
@@ -16,6 +19,15 @@ public class StartUI {
                 Item item = new Item(name);
                 tracker.add(item);
                 System.out.println("Добавленная заявка:  " + item);
+            } else if (select == 1) {
+                Item[] items = tracker.findAll();
+                if (items.length > 0) {
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
+                } else {
+                    System.out.println("Хранилище еще не содержит заявок");
+                }
             } else if (select == 6) {
                 run = false;
             }
