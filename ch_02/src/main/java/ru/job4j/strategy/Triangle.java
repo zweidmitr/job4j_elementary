@@ -4,12 +4,8 @@ public class Triangle implements Shape {
     @Override
     public String draw() {
         String ln = System.lineSeparator();
-        return    "     ^    "  + ln
-                + "    / \\  "  + ln
-                + "   /   \\ "  + ln;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new Triangle().draw());
+        return "     ^    " + ln
+                + "    / \\  " + ln
+                + "   /   \\ " + ln;
     }
 }
