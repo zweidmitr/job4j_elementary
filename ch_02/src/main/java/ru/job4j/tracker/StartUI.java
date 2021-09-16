@@ -15,7 +15,7 @@ public class StartUI {
             this.showMenu(actions);
             int select = input.askInt("Select: ");
             if (select < 0 || select >= actions.length) {
-                out.println("Wrong input!! You can  select: 0, 1, 2, 3, 4, 5, 6");
+                out.println("Wrong input!! You can select: 0 .. 0");
                 continue;
             }
             UserAction action = actions[select];

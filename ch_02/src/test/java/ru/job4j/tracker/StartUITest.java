@@ -13,6 +13,27 @@ public class StartUITest {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
 
     @Test
+    public void whenInvalidExit() {
+        Output out = new StubOutput();
+        Input in = new StubInput(new String[]{"15", "1", "0"});
+        Tracker tracker = new Tracker();
+        UserAction[] action = new UserAction[]{new ShowAllItemAction(out), new ExitProgramAction()};
+        new StartUI(out).init(in, tracker, action);
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is(
+                "Menu: " + ln
+                        + "0. Show all item" + ln
+                        + "1. Exit program" + ln
+                        + "Wrong input!! You can select: 0 .. 0" + ln
+                        + "Menu: " + ln
+                        + "0. Show all item" + ln
+                        + "1. Exit program" + ln
+                )
+        );
+
+    }
+
+    @Test
     public void whenExit() {
         Output out = new StubOutput();
         Input in = new StubInput(new String[]{"0"});
