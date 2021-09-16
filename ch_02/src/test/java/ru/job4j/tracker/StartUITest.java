@@ -70,7 +70,7 @@ public class StartUITest {
         assertThat(out.toString(), is("Menu: " + System.lineSeparator()
                 + "0. Show all item" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()
-                + item.toString() + System.lineSeparator()
+                + item + System.lineSeparator()
                 + "Menu: " + System.lineSeparator()
                 + "0. Show all item" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()));
@@ -88,7 +88,7 @@ public class StartUITest {
                 + "0. Find items by name" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()
                 + "=== Find by name ===" + System.lineSeparator()
-                + item.toString() + System.lineSeparator()
+                + item + System.lineSeparator()
                 + "Menu: " + System.lineSeparator()
                 + "0. Find items by name" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()));
@@ -106,7 +106,7 @@ public class StartUITest {
                 + "0. Find item by id" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()
                 + "=== Find item by id ===" + System.lineSeparator()
-                + item.toString() + System.lineSeparator()
+                + item + System.lineSeparator()
                 + "Menu: " + System.lineSeparator()
                 + "0. Find item by id" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()));
