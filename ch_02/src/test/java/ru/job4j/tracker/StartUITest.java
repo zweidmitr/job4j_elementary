@@ -70,11 +70,7 @@ public class StartUITest {
         assertThat(out.toString(), is("Menu: " + System.lineSeparator()
                 + "0. Show all item" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()
-                + "Item{"
-                + "id=" + item.getId() + ", "
-                + "name='" + item.getName() + "', "
-                + "created=" + item.getTime().format(FORMATTER)
-                + "}" + System.lineSeparator()
+                + item.toString() + System.lineSeparator()
                 + "Menu: " + System.lineSeparator()
                 + "0. Show all item" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()));
@@ -92,11 +88,7 @@ public class StartUITest {
                 + "0. Find items by name" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()
                 + "=== Find by name ===" + System.lineSeparator()
-                + "Item{"
-                + "id=" + item.getId() + ", "
-                + "name='" + item.getName() + "', "
-                + "created=" + item.getTime().format(FORMATTER)
-                + "}" + System.lineSeparator()
+                + item.toString() + System.lineSeparator()
                 + "Menu: " + System.lineSeparator()
                 + "0. Find items by name" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()));
@@ -114,11 +106,7 @@ public class StartUITest {
                 + "0. Find item by id" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()
                 + "=== Find item by id ===" + System.lineSeparator()
-                + "Item{"
-                + "id=" + item.getId() + ", "
-                + "name='" + item.getName() + "', "
-                + "created=" + item.getTime().format(FORMATTER)
-                + "}" + System.lineSeparator()
+                + item.toString() + System.lineSeparator()
                 + "Menu: " + System.lineSeparator()
                 + "0. Find item by id" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()));
