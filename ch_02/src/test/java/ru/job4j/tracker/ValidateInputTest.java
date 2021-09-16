@@ -33,14 +33,16 @@ public class ValidateInputTest {
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter: ");
         assertThat(selected, is(9));
+        int selectedTwo = input.askInt("Enter: ");
+        assertThat(selectedTwo, is(55));
     }
 
     @Test
     public void whenInvalidMinus() {
         Output out = new StubOutput();
-        Input in = new StubInput(new String[]{"-1", "5"});
+        Input in = new StubInput(new String[]{"-7"});
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("word");
-        assertThat(selected, is(5));
+        assertThat(selected, is(-7));
     }
 }
