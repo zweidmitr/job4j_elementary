@@ -23,6 +23,6 @@ public class ConvertList2ArrayTest {
                 {7, 0, 0}
         };
 
-        assertThat(result,is(expected));
+        assertThat(result, is(expected));
     }
 }
