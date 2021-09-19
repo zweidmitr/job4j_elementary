@@ -27,7 +27,7 @@ public class Account {
 
     @Override
     public int hashCode() {
-        return Objects.hash(passport, username, deposit);
+        return Objects.hash(passport);
     }
 
     @Override

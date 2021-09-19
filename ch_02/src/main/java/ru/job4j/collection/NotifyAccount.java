@@ -8,10 +8,7 @@ public class NotifyAccount {
         HashSet<Account> rsl = new HashSet<>();
         Account temp = new Account("test", "test", "test");
         for (Account acco : accounts) {
-            if (!acco.equals(temp)) {
-                temp = acco;
                 rsl.add(acco);
-            }
         }
         return rsl;
     }
