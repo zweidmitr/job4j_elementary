@@ -7,10 +7,6 @@ public class UniqueElement {
         if (list.indexOf(str) == -1) {
             return false;
         }
-        if (list.indexOf(str) == list.lastIndexOf(str)) {
-            return true;
-        } else {
-            return false;
-        }
+        return list.indexOf(str) == list.lastIndexOf(str);
     }
 }
