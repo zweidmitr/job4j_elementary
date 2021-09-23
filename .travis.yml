@@ -18,3 +18,10 @@ notifications:
       - zweidmitr@gmail.com
     on_success: never # default: change
     on_failure: always # default: always
+
+
+env:
+
+  global:
+
+     - CODECOV_TOKEN="a105ec5b-93a5-40e9-acca-877a2759443c"
