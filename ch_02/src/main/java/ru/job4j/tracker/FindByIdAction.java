@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import ru.job4j.calculate.Out;
-
 public class FindByIdAction implements UserAction {
     public final Output out;
 
