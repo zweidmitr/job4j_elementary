@@ -32,7 +32,7 @@ public class User implements Comparable<User> {
     public int compareTo(User otherUser) {
         int res = this.name.compareTo(otherUser.name);
         if (res == 0) {
-            res = this.age - otherUser.age;
+            res = Integer.compare(this.age, otherUser.age);
         }
         return res;
     }
