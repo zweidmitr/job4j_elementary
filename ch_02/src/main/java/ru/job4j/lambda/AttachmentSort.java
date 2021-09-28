@@ -21,9 +21,9 @@ public class AttachmentSort {
             }
         };
         attachments.sort(comparator);
-        System.out.println("---------------------------");
+        System.out.println("--------------------------");
         System.out.println(attachments);
-        System.out.println("---------------------------");
+        System.out.println("--------------------------");
 
         Comparator nameComparator = new Comparator() {
             @Override
@@ -35,7 +35,7 @@ public class AttachmentSort {
         };
         attachments.sort(nameComparator);
         System.out.println(attachments);
-        System.out.println("---------------------------");
+        System.out.println("--------------------------");
 
         ArrayList list = new ArrayList() {
             @Override
@@ -45,6 +45,6 @@ public class AttachmentSort {
             }
         };
         list.add(100500);
-        System.out.println("---------------------------");
+        System.out.println("--------------------------");
     }
 }
