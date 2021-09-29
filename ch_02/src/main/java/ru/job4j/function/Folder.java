@@ -3,8 +3,8 @@ package ru.job4j.function;
 import java.util.Objects;
 
 public class Folder {
-    String name;
-    int size;
+    private String name;
+    private int size;
 
     public Folder(String name, int size) {
         this.name = name;
