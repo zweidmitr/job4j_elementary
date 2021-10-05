@@ -1,5 +1,14 @@
 # job4j
-Проект содержит решения блока "Базовый синтаксис" курса Job4j.
+О проекте: 
+проект содержит решения блока "Базовый синтаксис" курса Job4j.
+
+Сборка или установка: 
+собирается через Maven
+
+Как использовать: пока просто смотреть)
+
+Контакты:https:
+//github.com/zweidmitr
 
 
 [![Build Status](https://app.travis-ci.com/zweidmitr/job4j_elementary.svg?branch=master)](https://app.travis-ci.com/zweidmitr/job4j_elementary)
