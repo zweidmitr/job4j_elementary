@@ -78,7 +78,6 @@ public class StreamUsage {
                 elem -> elem > 0
         ).collect(Collectors.toList());
         filterNumbers.forEach(System.out::println);
-        System.out.println("=======================");
 
     }
 }
