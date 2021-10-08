@@ -13,33 +13,30 @@ import static org.junit.Assert.*;
 public class ListToMapTest {
 
     @Test
-    public void fromListToMapSize() {
-        List<Student> students = List.of(
-                new Student(7, "Alex"),
-                new Student(5, "Dmitr"),
-                new Student(6, "Var"),
-                new Student(8, "Ksu"),
-                new Student(10, "Zwei"),
-                new Student(10, "Zwei")
-        );
-        ListToMap mapFromL = new ListToMap();
-        int result = mapFromL.fromListToMap(students).size();
-        assertThat(result, is(5));
-    }
+    public void whenListLargerMap() {
+        List<Student> students = new ArrayList<>();
+        Student st1 = new Student(7, "Alex");
+        Student st2 = new Student(5, "Dmitr");
+        Student st3 = new Student(6, "Var");
+        Student st4 = new Student(8, "Ksu");
+        Student st5 = new Student(10, "Zwei");
+        Student st6 = new Student(10, "Zwei");
+        students.add(st1);
+        students.add(st2);
+        students.add(st3);
+        students.add(st4);
+        students.add(st5);
+        students.add(st6);
+        ListToMap mapFrom = new ListToMap();
+        Map<String, Student> result = mapFrom.fromListToMap(students);
+        Map<String, Student> expected = new HashMap();
+        expected.put("Alex", st1);
+        expected.put("Dmitr", st2);
+        expected.put("Var", st3);
+        expected.put("Ksu", st4);
+        expected.put("Zwei", st5);
 
-    @Test
-    public void fromListToMapKey() {
-        List<Student> students = List.of(
-                new Student(7, "Alex"),
-                new Student(5, "Dmitr"),
-                new Student(6, "Var"),
-                new Student(8, "Ksu"),
-                new Student(10, "Zwei"),
-                new Student(10, "Zwei")
-        );
-        ListToMap mapFromL = new ListToMap();
-        boolean result = mapFromL.fromListToMap(students).containsKey("Zwei");
-        assertThat(result, is(true));
+        assertEquals(result, expected);
     }
 
     @Test
