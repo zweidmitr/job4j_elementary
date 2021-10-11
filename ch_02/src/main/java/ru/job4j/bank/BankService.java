@@ -34,9 +34,9 @@ public class BankService {
      * @param account  счет который необходимо проверить
      */
     public void addAccount(String passport, Account account) {
-        Optional<User> balvance = findByPassport(passport);
-        if (balvance.isPresent()) {
-            List<Account> oneUser = users.get(balvance.get());
+        Optional<User> user = findByPassport(passport);
+        if (user.isPresent()) {
+            List<Account> oneUser = users.get(user.get());
             if (!oneUser.contains(account)) {
                 oneUser.add(account);
             }
