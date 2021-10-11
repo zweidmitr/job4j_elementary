@@ -64,9 +64,9 @@ public class BankService {
      * @return возвращает счет пользователя
      */
     public Optional<Account> findByRequisite(String passport, String requisite) {
-        Optional<User> balvance = findByPassport(passport);
-        if (balvance.isPresent()) {
-            return users.get(balvance.get())
+        Optional<User> user = findByPassport(passport);
+        if (user.isPresent()) {
+            return users.get(user.get())
                     .stream()
                     .filter(u -> u.getRequisite().equals(requisite))
                     .findFirst();
