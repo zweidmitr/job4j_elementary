@@ -4,22 +4,22 @@ public class SimpleStringEncoder {
     public static String encode(String input) {
         StringBuilder result = new StringBuilder();
         char symbol = input.charAt(0);
-        int counter = 0;
+        int count = 0;
         for (int i = 0; i < input.length(); i++) {
             if (symbol == input.charAt(i)) {
-                counter++;
+                count++;
             } else {
                 result.append(symbol);
-                if (counter > 1) {
-                    result.append(counter);
+                if (count > 1) {
+                    result.append(count);
                 }
                 symbol = input.charAt(i);
-                counter = 1;
+                count = 1;
             }
         }
         result.append(symbol);
-        if (counter > 1) {
-            result.append(counter);
+        if (count > 1) {
+            result.append(count);
         }
         return result.toString();
     }
