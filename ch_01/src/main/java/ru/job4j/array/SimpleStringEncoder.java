@@ -1,29 +1,26 @@
 package ru.job4j.array;
 
-import java.util.Objects;
-
 public class SimpleStringEncoder {
     public static String encode(String input) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         char symbol = input.charAt(0);
         int counter = 0;
         for (int i = 0; i < input.length(); i++) {
-            char currentSymbol = input.charAt(i);
-            if (Objects.equals(symbol, currentSymbol)) {
+            if (symbol == input.charAt(i)) {
                 counter++;
             } else {
-                result += symbol;
+                result.append(symbol);
                 if (counter > 1) {
-                    result += counter;
+                    result.append(counter);
                 }
-                symbol = currentSymbol;
+                symbol = input.charAt(i);
                 counter = 1;
             }
         }
-        result += symbol;
+        result.append(symbol);
         if (counter > 1) {
-            result += counter;
+            result.append(counter);
         }
-        return result;
+        return result.toString();
     }
 }
